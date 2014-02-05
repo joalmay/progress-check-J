@@ -2,7 +2,18 @@ $('document').ready(function(){
 	
 	$("#total-calculate").click( function() {
 		var subtotal = parseFloat($("#sub-total").val());
+		var total = $("#total-amount");
+
 		console.log("sub:", subtotal*1.2)
+
+		//Clear Span
+		total.text(" ");
+
+		//Append
+		total.append(subtotal*1.2);
+
+		//Clear Input
+		$("#sub-total").val("");
 
 	});
 
